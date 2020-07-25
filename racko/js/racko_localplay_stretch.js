@@ -1,5 +1,5 @@
 import { pullListFromStorage, setListToStorage } from './ls.js';
-import { createElement, numbers, isPrime } from './utilities.js';
+import { createElement,numbers, isPrime } from './utilities.js';
 let newPlayer, newAI;
 let turns = 0;
 let scoreBoardList = [];
