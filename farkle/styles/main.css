@@ -1,0 +1,280 @@
+﻿/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    FONTS/COLORS
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    Light Goldenrod Yellow: 1:#fdfefb  2:#f7fbe9  3:#eff7cf  4:#d8e5a4  5:#afc16b  6:#8ca042  7:#6c8023  8: #4a5b0b
+    Turquoise Green:        1:#f5f8f5  2:#dbead9  3:#bad9b5  4:#90bf88  5:#63a059
+    Olive Green:            1:#f8f3ca  2:#cdc68d  3:#aba361  4:#817a40  5:#706823
+    Wine:                   1:#b87070  2:#904b4b  3:#732c2c  4:#581616  5:#380505
+    Dark Sienna:            1:#783640  2:#5f1e28  3:#420c14  4:#270107  5:#110003
+*/
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@200;400;500;600;700&display=swap');
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    GENERAL
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+    background-color: #420c14;
+    font-family: 'Markazi Text', serif;
+    color: white;
+}
+
+button, input {
+    padding: .25em;
+    width: 12em;
+    margin: 1em auto;
+    border: 1px solid #888888;
+    border-radius: 7px;
+    box-shadow: 6px 6px #6c8023,5px 5px #6c8023, 4px 4px #6c8023, 3px 3px #6c8023, 2px 2px #6c8023, 1px 1px #6c8023;
+    font-family: 'Markazi Text', serif;
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #eff7cf;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.hidden {
+    display: none;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    LAYOUT
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#play-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#roll-area {
+    display: grid;
+    grid-template-areas: 'die1 die2 die3 die4 die5 die6';
+    grid-gap: 1em;
+    max-width: 25em;
+    margin-top: 1em;
+}
+
+
+#die1 {
+    grid-area: die1;
+}
+
+#die2 {
+    grid-area: die2;
+}
+
+#die3 {
+    grid-area: die3;
+}
+
+#die4 {
+    grid-area: die4;
+}
+
+#die5 {
+    grid-area: die5;
+}
+
+#die6 {
+    grid-area: die6;
+}
+
+#keep-area {
+    max-width: 25em;
+    margin-top: 1em;
+    height: 15em;
+}
+
+#keep-area h2 {
+    grid-area: keep;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#keep1 {
+    grid-area: keep1;
+}
+
+#keep2 {
+    grid-area: keep2;
+}
+
+#keep3 {
+    grid-area: keep3;
+}
+
+#keep4 {
+    grid-area: keep4;
+}
+
+#keep5 {
+    grid-area: keep5;
+}
+
+#keep6 {
+    grid-area: keep6;
+}
+
+.hidden{
+    display: hidden;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    DICE
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.kept, .saved{
+    transform: translateY(125px);
+    transition: .7s linear;
+}
+.rolled {
+    transition: 1s;
+}
+
+.die {
+    border: 1px solid #6c8023;
+    border-radius: 7px;
+    background-color: #f5f8f5;
+    height: 3em;
+    width: 3em;
+    box-shadow: 7px 7px #6c8023, 6px 6px #6c8023, 5px 5px #6c8023, 4px 4px #6c8023, 3px 3px #6c8023, 2px 2px #6c8023, 1px 1px #6c8023;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rolled:hover, button:hover {
+    box-shadow: 7px 7px #d8e5a4, 6px 6px #d8e5a4, 5px 5px #d8e5a4, 4px 4px #d8e5a4, 3px 3px #d8e5a4, 2px 2px #d8e5a4, 1px 1px #d8e5a4;
+    transition: box-shadow .25s;
+}
+
+.render1:after, .render2::after, .render3::after, .render4::after, .render5::after, .render6::after {
+    content: " ";
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    text-align: center;
+}
+.render1:after {
+    background-color: #6c8023;
+}
+
+.render2::after {
+    box-shadow: 12px 12px #6c8023, -12px -12px #6c8023;
+}
+
+.render3::after {
+    box-shadow: 12px 12px #6c8023, -12px -12px #6c8023;
+    background-color: #6c8023;
+}
+
+.render4::after {
+    box-shadow: 12px 12px #6c8023, -12px -12px #6c8023, -12px 12px #6c8023, 12px -12px #6c8023;
+}
+
+.render5::after {
+    box-shadow: 12px 12px #6c8023, -12px -12px #6c8023, -12px 12px #6c8023, 12px -12px #6c8023;
+    background-color: #6c8023;
+}
+
+.render6::after {
+    box-shadow: 12px 12px #6c8023, -12px -12px #6c8023, -12px 12px #6c8023, 12px -12px #6c8023, -12px 0px #6c8023, 12px 0px #6c8023;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    COVER
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+div.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #420c14;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.farkle-cover {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1.farkle-cover {
+    animation: spin 1.5s ease-in;
+}
+
+h1.win-cover {
+    letter-spacing: 3px;
+    animation: spin 2s ease-in;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    DISPLAY SCORE/TURN
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+#score-turn {
+    font-size: 2em;
+    color: #eff7cf;
+}
+
+#score-total {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
+.display-score {
+    color: #aba361;
+    /*animation: floating-text 1s ease-in;*/
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 1s;
+}
+
+#which-player{
+    margin-top: 1em;
+    font-size: 3em;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    ANIMATIONS
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@keyframes floating-text {
+    to{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+@keyframes spin{
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(720deg);
+    }
+}
