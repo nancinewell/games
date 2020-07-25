@@ -599,7 +599,11 @@ function combo3(dice) {
                 }
                 score += oneOrFive(dice[3]);
             } else if (dice[1] == dice[3]) {
-                score += (dice[0] * 100);
+                if (dice[1] == 1) {
+                    score += (dice[1] * 1000);
+                } else {
+                    score += (dice[1] * 100);
+                }
                 score += oneOrFive(dice[0]);
             }
             break;
