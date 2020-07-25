@@ -1,0 +1,59 @@
+﻿/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    FONTS/COLORS
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    Light Gray:         1:#  2:#ffffff  3:#e8e8e8  4:#bbbbbb  5:#8e8d8d
+    Gray:               1:#  2:#ededed  3:#bfbfbf  4:#949494  5:#656464
+    Dark Gray:          1:#f2f2f2  2:#bcbbbe  3:#96939b  4:#797482  5:#5f586b
+    Green:              1:#e4f0e4  2:#bfdcbf  3:#94c595  4:#67a867  5:#3f8b3f
+    Red:                1:#fff3f3  2:#ffdddd  3:#f6b9b9  4:#d18080  5:#ae4f4f
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    GENERAL
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 1.25em;
+}
+
+main{
+    padding: 1em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    HEADER
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+span.brand {
+    font-weight: 800;
+    color: #94c595;
+}
+
+h1.brand {
+    font-weight: 400;
+    color: #e8e8e8;
+}
+
+header {
+    background-color: #656464;
+    margin: 0;
+    padding: 1em;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    LIST/LINKS
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ul, li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #f6b9b9;
+    font-weight: 600;
+    transition: .3s;
+}
+
+a:hover {
+    color: #ae4f4f;
+}

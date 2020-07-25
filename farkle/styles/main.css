@@ -46,6 +46,7 @@ h2 {
 .hidden {
     display: none;
 }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
                     LAYOUT
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -106,33 +107,6 @@ main {
     margin-bottom: 3em;
 }
 
-#keep1 {
-    grid-area: keep1;
-}
-
-#keep2 {
-    grid-area: keep2;
-}
-
-#keep3 {
-    grid-area: keep3;
-}
-
-#keep4 {
-    grid-area: keep4;
-}
-
-#keep5 {
-    grid-area: keep5;
-}
-
-#keep6 {
-    grid-area: keep6;
-}
-
-.hidden{
-    display: hidden;
-}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
                     DICE
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

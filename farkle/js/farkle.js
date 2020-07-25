@@ -344,8 +344,7 @@ function rollDice() {
             keepButton.addEventListener("click", keepPoints)
         //If Farkle
         } else {
-            //reset dice
-            resetDice();
+            
             //reset temp score
             player.tempScore = 0;
             //display FARKLE
@@ -357,6 +356,7 @@ function rollDice() {
             //remove Farkle display
             setTimeout(function () {
                 main.removeChild(farkleCover);
+                resetDice();
                 whosTurn()
             }, 2000)
         }

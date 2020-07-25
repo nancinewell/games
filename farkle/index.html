@@ -12,13 +12,28 @@
     </header>
 
     <main>
-        <h1>Welcome!</h1>
-        <p>I am a web development student and attempt to digitize games to practice and improve my skills</p>
-
-        <ul>
-            <a href="farkle.html"><li>Farkle</li></a>
-            <a href="racko.html"><li>Racko</li></a>
-        </ul>
+        <section id="play-area">
+            <button id="play-button" onclick="play()">Play!</button>
+            <button id="roll-button" class="hidden">Roll</button>
+            <section id="roll-area">
+                <div id="1"class="die render1 roll" name="1"></div>
+                <div id="2"class="die render2 roll" name="2"></div>
+                <div id="3"class="die render3 roll" name="3"></div>
+                <div id="4"class="die render4 roll" name="4"></div>
+                <div id="5"class="die render5 roll" name="5"></div>
+                <div id="6"class="die render6 roll" name="6"></div>
+            </section>
+            <section id="keep-area">
+                <h2>Keep</h2>
+                <button id="keep-button" class="hidden">Save &amp; End Turn</button>
+            </section>
+        </section>
+        <section id="score-turn"></section>
+        <section id="score-total">
+            <div id="player1"></div>
+            <div id="player2"></div>
+        </section>
+        <div id="which-player"></div>
     </main>
     <script src="js/farkle.js"></script>
 </body>
