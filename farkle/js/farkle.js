@@ -387,7 +387,7 @@ function keepPoints() {
     //flip remaining dice back to .roll
     resetDice();
 
-    //if turns is odd, Player 1's turn
+    //Check win condition
     if (players == 2) {
         if (turns % 2 == 1) {
             if (player1.totalScore >= 10000) {
