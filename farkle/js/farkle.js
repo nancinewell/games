@@ -388,14 +388,19 @@ function keepPoints() {
     resetDice();
 
     //if turns is odd, Player 1's turn
-    if (turns % 2 == 1) {
-        if (player1.totalScore >= 10000) {
-            win(player1.name);
+    if (players == 2) {
+        if (turns % 2 == 1) {
+            if (player1.totalScore >= 10000) {
+                win(player1.name);
+            }
+        } else {
+            if (player2.totalScore >= 10000) {
+                win(player2.name);
+            }
         }
     } else {
-        if (player2.totalScore >= 10000) {
-            win(player2.name);
-        }
+        if (player1.totalScore >= 10000) {
+            win(player1.name);
     }
     whosTurn();
 }
